@@ -274,7 +274,7 @@ export default function LandingPage() {
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="w-full flex-shrink-0 px-4">
                       <blockquote className="text-center">
-                        <p className="text-xl mb-4">"{testimonial.quote}"</p>
+                        <p className="text-xl mb-4">&#34;{testimonial.quote}&#34;</p>
                         <cite className="text-lg font-semibold">
                           - {testimonial.name}
                         </cite>
