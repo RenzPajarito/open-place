@@ -34,10 +34,12 @@ const links: LinkItem[] = [
   },
 ];
 
-export default function Header({ headerType, showHeader }: HeaderProps) {
+export default function Header({ headerType, showHeader = true }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const renderHeaderLinks = () => {
+    if (!showHeader) return null;
+
     if (headerType === "newHeader") {
       return <div className="hidden md:flex space-x-4 font-medium" />;
     }
@@ -80,7 +82,7 @@ export default function Header({ headerType, showHeader }: HeaderProps) {
       </nav>
       {isMenuOpen && (
         <div className="md:hidden mt-4 space-y-2 text-gray-800">
-          {headerType !== "newHeader" ? (
+          {headerType !== "newHeader" && showHeader ? ( // Use showHeader here too
             <>
               {links.map((link) => (
                 <Link
