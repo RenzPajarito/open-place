@@ -170,7 +170,7 @@ const TermsConditions = () => {
   return (
     <>
       <div className="px-4 py-8 min-h-screen">
-        <div className="max-w-6xl mx-auto p-6">
+        <div className="max-w-6xl mx-auto">
           <Link href="/">
             <img
               src="/logo.png"
