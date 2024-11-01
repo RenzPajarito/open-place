@@ -12,7 +12,18 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const links = [
+interface LinkItem {
+  title: string;
+  href: string;
+  icon: JSX.Element;
+}
+
+interface FooterProps {
+  showFooter: boolean;
+  footerType: 'default' | 'newFooter';
+}
+
+const links: LinkItem[] = [
   {
     title: "About",
     href: "#about",
@@ -50,7 +61,7 @@ const links = [
   },
 ];
 
-const newLinks = [
+const newLinks: LinkItem[] = [
   {
     title: "Privacy Policy",
     href: "/privacy-policy",
@@ -68,32 +79,13 @@ const newLinks = [
   },
 ];
 
-export default function Footer({ showFooter, footerType }: any) {
+export default function Footer({ showFooter, footerType }: FooterProps) {
   const renderFooterLinks = () => {
-    if (footerType === 'newFooter') {
-      return (
-        <ul className="space-y-2">
-          {newLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-gray-300 hover:text-[#DCEFFB] transition-all duration-200 flex items-center group"
-              >
-                {link.icon}
-                <span className="relative">
-                  {link.title}
-                  <span className="absolute left-0 bottom-0 w-full h-0.5 bg-[#DCEFFB] transform scale-x-0 transition-transform duration-200 group-hover:scale-x-100"></span>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )
-    }
+    const currentLinks = footerType === 'newFooter' ? newLinks : links;
 
     return (
       <ul className="space-y-2">
-        {links.map((link) => (
+        {currentLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
@@ -108,7 +100,7 @@ export default function Footer({ showFooter, footerType }: any) {
           </li>
         ))}
       </ul>
-    )
+    );
   }
 
   return (
