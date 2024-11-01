@@ -197,7 +197,7 @@ const TermsConditions = () => {
           ))}
         </div>
       </div>
-      <Footer showFooter={true} footerType={'newFooter'} />
+      <Footer showFooter={true} footerType="newFooter" />
     </>
   );
 };

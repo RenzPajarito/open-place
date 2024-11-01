@@ -28,7 +28,7 @@ export default function FeedbackPage() {
 
   return (
     <div>
-      <Header showHeader={true} headerType={'newHeader'} />
+      <Header showHeader={true} headerType="newHeader" />
       <div className="min-h-screen py-12 flex items-center">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#195276]">
@@ -86,7 +86,7 @@ export default function FeedbackPage() {
           </div>
         </div>
       </div>
-      <Footer showFooter={true} footerType={'newFooter'} />
+      <Footer showFooter={true} footerType="newFooter" />
     </div>
   );
 }

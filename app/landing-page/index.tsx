@@ -177,7 +177,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen text-[#195276]">
-      <Header />
+      <Header showHeader={true} headerType="default" />
 
       <main>
         <section className="container min-h-screen flex items-center justify-center gap-14 sm:flex-row flex-col-reverse mx-auto px-4 py-20 text-left">
@@ -425,7 +425,7 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <Footer showFooter={true} />
+      <Footer showFooter={true} footerType="default" />
     </div>
   );
 }

@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
 
-      <Footer showFooter={true} footerType={'newFooter'} />
+      <Footer showFooter={true} footerType="newFooter" />
     </div>
   );
 };
