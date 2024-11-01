@@ -83,7 +83,7 @@ export default function Header({ headerType, showHeader = true }: HeaderProps) {
       </nav>
       {isMenuOpen && (
         <div className="md:hidden mt-4 space-y-2 text-gray-800">
-          {headerType !== "newHeader" && showHeader ? ( // Use showHeader here too
+          {headerType !== "newHeader" && showHeader ? (
             <>
               {links.map((link) => (
                 <Link

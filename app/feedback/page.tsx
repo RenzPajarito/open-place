@@ -22,7 +22,6 @@ export default function FeedbackPage() {
 
     setCodeName("");
     setMessage("");
-    // Show success message for 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
