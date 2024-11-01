@@ -37,7 +37,7 @@ export default function FeedbackPage() {
         <p className="text-center text-[#195276] mb-8 max-w-2xl mx-auto">
           Your insights and opinions are crucial in helping us improve Open
           Place. We appreciate your time in sharing your thoughts with us. Your
-          feedback helps shape the future of our community and ensures we're
+          feedback helps shape the future of our community and ensures we&apos;re
           meeting your needs.
         </p>
         <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">

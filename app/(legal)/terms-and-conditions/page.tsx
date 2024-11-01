@@ -82,7 +82,7 @@ const terms = [
         <br />
         - Engaging in spam, phishing, or unauthorized advertising
         <br />
-        - Attempting to hack or interfere with the platform's security
+        - Attempting to hack or interfere with the platform&apos;s security
         <br />
         - Collecting or harvesting any personally identifiable information about other users
         <br />
@@ -110,7 +110,7 @@ const terms = [
     title: 'Limitation of Liability',
     body: (
       <>
-        Open Place is provided on an "as is" basis without warranties of any kind, either express or
+        Open Place is provided on an &quot;as is&quot; basis without warranties of any kind, either express or
         implied. We do not guarantee the accuracy, completeness, or reliability of any content on
         the platform.
         <br />

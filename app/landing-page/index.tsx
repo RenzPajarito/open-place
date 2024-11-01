@@ -27,12 +27,16 @@ export default function LandingPage() {
     { name: "Sarah T.", quote: "Open Place gave me a sense of belonging." },
     {
       name: "Mark P.",
-      quote:
-        "The privacy and anonymity let me share things I couldn't elsewhere.",
+      quote: (
+        <>
+          The privacy and anonymity let me share things I couldn&apos;t
+          elsewhere.
+        </>
+      ),
     },
     {
       name: "Alex R.",
-      quote: "I've discovered so many new perspectives here!",
+      quote: <>I&apos;ve discovered so many new perspectives here!</>,
     },
   ];
 
@@ -59,8 +63,14 @@ export default function LandingPage() {
     },
     {
       question: "How do I start my own community on Open Place?",
-      answer:
-        "To start a community, log into your account, navigate to the 'Create Community' section, choose your privacy settings, and invite members. You can customize your community's rules and moderation preferences.",
+      answer: (
+        <>
+          To start a community, log into your account, navigate to the
+          &apos;Create Community&apos; section, choose your privacy settings,
+          and invite members. You can customize your community&apos;s rules and
+          moderation preferences.
+        </>
+      ),
     },
     {
       question: "How does Open Place handle content moderation?",
@@ -79,8 +89,14 @@ export default function LandingPage() {
     },
     {
       question: "How can I upgrade to a Pro account?",
-      answer:
-        "To upgrade to a Pro account, go to your account settings and select the 'Upgrade to Pro' option. You can choose between monthly or annual billing cycles and enjoy additional features like unlimited private rooms and priority support.",
+      answer: (
+        <>
+          To upgrade to a Pro account, go to your account settings and select
+          the &apos;Upgrade to Pro&apos; option. You can choose between monthly
+          or annual billing cycles and enjoy additional features like unlimited
+          private rooms and priority support.
+        </>
+      ),
     },
   ];
 
@@ -93,7 +109,7 @@ export default function LandingPage() {
   const features = [
     {
       title: "Secure & Private Connections",
-      text: "Your data and privacy are our top priority. From encryption to user- anonymity features, our platform is tailored to keep your experiences safe and confidential.",
+      text: "Your data and privacy are our top priority. From encryption to user-anonymity features, our platform is tailored to keep your experiences safe and confidential.",
       icon: <Lock className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
     },
     {
@@ -108,7 +124,13 @@ export default function LandingPage() {
     },
     {
       title: "User-First Design",
-      text: "Intuitive and simple to use. Our platform’s design is straightforward, letting you focus on the connections and content that matter most.",
+      text: (
+        <>
+          Intuitive and simple to use. Our platform&apos;s design is
+          straightforward, letting you focus on the connections and content that
+          matter most.
+        </>
+      ),
       icon: <Smartphone className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
     },
   ];
@@ -116,15 +138,15 @@ export default function LandingPage() {
   const gettingStart = [
     {
       title: "Create Your Profile",
-      text: "Sign up quickly without sharing personal details. Our streamlined onboarding gets you connected to your community while keeping your privacy top priority."
+      text: "Sign up quickly without sharing personal details. Our streamlined onboarding gets you connected to your community while keeping your privacy top priority.",
     },
     {
       title: "Connect with Others",
-      text: "Discover and join communities that align with your interests. Connect meaningfully and securely with others through shared passions and goals."
+      text: "Discover and join communities that align with your interests. Connect meaningfully and securely with others through shared passions and goals.",
     },
     {
       title: "Share and Discover",
-      text: "Engage in supportive conversations, explore new ideas, and connect with diverse perspectives. Every interaction here is designed to inspire personal and community growth."
+      text: "Engage in supportive conversations, explore new ideas, and connect with diverse perspectives. Every interaction here is designed to inspire personal and community growth.",
     },
   ];
 
