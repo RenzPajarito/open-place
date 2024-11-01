@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -63,7 +64,7 @@ export default function Header({ headerType, showHeader = true }: HeaderProps) {
     <header className="fixed min-w-full bg-[#ffffff]/80 backdrop-blur-sm p-4 z-10">
       <nav className="container mx-auto flex justify-between items-center text-gray-800">
         <Link href="/">
-          <img src="/logo.png" width={110} alt="Open Place Logo" />
+          <Image src="/logo.png" height={110} width={110} alt="Open Place Logo" />
         </Link>
         {renderHeaderLinks()}
         <Button className="hidden md:block bg-[#F3AA1D] text-[#f7f7f7] hover:bg-[#F3AA1D]/90">

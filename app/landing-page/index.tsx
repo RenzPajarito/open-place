@@ -14,6 +14,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import Header from "../../components/ui/landing-page/header";
+import Image from "next/image";
 
 export default function LandingPage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -198,7 +199,7 @@ export default function LandingPage() {
             </Button>
           </div>
           <div>
-            <img src="/friendship.svg" width={600} alt="Friendship SVG" />
+            <Image src="/friendship.svg" height={600} width={600} alt="Friendship SVG" />
           </div>
         </section>
 
@@ -226,8 +227,9 @@ export default function LandingPage() {
                 </ul>
               </div>
               <div className="md:w-1/2">
-                <img
+                <Image
                   src="/online_connection.svg"
+                  height={400}
                   width={400}
                   alt="online_connection"
                   className="mx-auto"

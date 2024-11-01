@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Footer from '@/components/ui/landing-page/footer';
+import Image from 'next/image';
 
 const texts = [
   {
@@ -66,8 +67,9 @@ const PrivacyPolicy = () => {
       <div className="px-4 py-8 min-h-screen">
         <div className="max-w-6xl mx-auto">
           <Link href="/">
-            <img
+            <Image
               src="/logo.png"
+              height={300}
               width={300}
               className="mx-auto"
               alt="Open Place Logo"
