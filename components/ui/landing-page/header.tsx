@@ -5,18 +5,16 @@ import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-// Define the type for the props
 interface HeaderProps {
-  headerType: 'default' | 'newHeader'; // Adjust this according to your use cases
+  headerType: 'default' | 'newHeader';
+  showHeader?: boolean;
 }
 
-// Define the type for the links
 interface LinkItem {
   title: string;
   href: string;
 }
 
-// Define the links
 const links: LinkItem[] = [
   {
     title: "About",
@@ -36,7 +34,7 @@ const links: LinkItem[] = [
   },
 ];
 
-export default function Header({ headerType }: HeaderProps) {
+export default function Header({ headerType, showHeader }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const renderHeaderLinks = () => {
