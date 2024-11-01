@@ -5,7 +5,19 @@ import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-const links = [
+// Define the type for the props
+interface HeaderProps {
+  headerType: 'default' | 'newHeader'; // Adjust this according to your use cases
+}
+
+// Define the type for the links
+interface LinkItem {
+  title: string;
+  href: string;
+}
+
+// Define the links
+const links: LinkItem[] = [
   {
     title: "About",
     href: "#about",
@@ -24,7 +36,7 @@ const links = [
   },
 ];
 
-export default function Header({ headerType }: any) {
+export default function Header({ headerType }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const renderHeaderLinks = () => {
@@ -82,9 +94,7 @@ export default function Header({ headerType }: any) {
                 </Link>
               ))}
             </>
-          ) : (
-            <></>
-          )}
+          ) : null}
           <Button className="w-full mt-2 bg-[#F3AA1D] text-[#f7f7f7] hover:bg-[#F3AA1D]/90">
             Join Now
           </Button>
