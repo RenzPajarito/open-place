@@ -1,49 +1,57 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Lightbulb, Smartphone, Users, Lock } from "lucide-react";
+import { Lock, ShieldCheck, MessageCircle, UserCheck } from "lucide-react";
 
 export default function Features() {
   const features = [
     {
-      title: "Secure & Private Connections",
-      text: "Your data and privacy are our top priority. From encryption to user-anonymity features, our platform is tailored to keep your experiences safe and confidential.",
+      title: "Total Privacy Assurance",
+      text: (
+        <>
+          We don&apos;t track personal data, location, or analytics. Open Place
+          is designed to put you in control, ensuring your data stays private.
+        </>
+      ),
+      icon: <ShieldCheck className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
+    },
+    {
+      title: "Unrestricted Conversations",
+      text: "Engage in public discussions, private groups, or direct chats—whatever fits your style. Open Place offers flexible, unrestricted communication.",
+      icon: <MessageCircle className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
+    },
+    {
+      title: "Safe, Secure Environment",
+      text: "Your privacy is protected at every step, creating a safe space for genuine interaction without compromising security.",
       icon: <Lock className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
     },
     {
-      title: "Supportive Communities",
-      text: "Find people who share your experiences. Dive into groups built around empathy and understanding, designed to bring out the best in every interaction.",
-      icon: <Users className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
-    },
-    {
-      title: "Explore New Possibilities",
-      text: "Discover new perspectives through discussions. Each conversation opens doors to diverse ideas and insights that expand your worldview.",
-      icon: <Lightbulb className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
-    },
-    {
-      title: "User-First Design",
+      title: "Truly Be Yourself",
       text: (
         <>
-          Intuitive and simple to use. Our platform&apos;s design is
-          straightforward, letting you focus on the connections and content that
-          matter most.
+          Open Place is built for authentic expression. Here, you&apos;re free
+          to be yourself, confident that your privacy is respected.
         </>
       ),
-      icon: <Smartphone className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
+      icon: <UserCheck className="mx-auto mb-4 text-[#F3AA1D]" size={48} />,
     },
   ];
 
   return (
-    <section id="features" className="py-20">
+    <section id="features" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-opb dark:text-gray-200">
           Why Open Place?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card key={index}>
-              <CardContent className="p-6 text-center text-gray-700">
+            <Card key={index} className="bg-white dark:bg-gray-800">
+              <CardContent className="p-6 text-center text-gray-700 dark:text-gray-300">
                 {feature.icon}
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p>{feature.text}</p>
+                <h3 className="text-xl font-semibold mb-2 text-opb dark:text-gray-200">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-opb/90 dark:text-gray-400">
+                  {feature.text}
+                </p>
               </CardContent>
             </Card>
           ))}

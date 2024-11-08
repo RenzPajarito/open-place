@@ -23,9 +23,9 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-[#195276] text-white py-20">
+    <section className="bg-[#195276] dark:bg-gray-900 text-white dark:text-gray-300 py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-gray-200">
           Hear from Our Users
         </h2>
         <div className="relative">
@@ -39,7 +39,7 @@ export default function Testimonials() {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <blockquote className="text-center">
-                    <p className="text-xl mb-4">
+                    <p className="text-xl mb-4 dark:text-gray-200">
                       &#34;{testimonial.quote}&#34;
                     </p>
                     <cite className="text-lg font-semibold">
@@ -55,7 +55,7 @@ export default function Testimonials() {
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full mx-1 ${
-                  index === activeTestimonial ? "bg-[#F3AA1D]" : "bg-white/50"
+                  index === activeTestimonial ? "bg-[#F3AA1D]" : "bg-white/50 dark:bg-gray-600"
                 }`}
                 onClick={() => setActiveTestimonial(index)}
               />

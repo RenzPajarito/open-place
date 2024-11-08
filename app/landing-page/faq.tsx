@@ -12,90 +12,58 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What is Open Place?",
-      answer:
-        "Open Place is a secure online platform where individuals can connect with like-minded people, share experiences, and explore new avenues of personal and collective growth. It prioritizes user privacy and fosters meaningful conversations in a safe environment.",
-    },
-    {
-      question: "How does Open Place ensure user privacy?",
-      answer:
-        "Open Place uses state-of-the-art encryption and security measures to protect user data. We implement strict privacy policies, allow anonymous interactions, and give users control over their personal information sharing preferences.",
-    },
-    {
-      question: "Can I use Open Place for free?",
-      answer:
-        "Yes, Open Place offers a free tier that includes access to public rooms and limited private rooms. For additional features and unlimited private rooms, we offer a Pro subscription plan.",
-    },
-    {
-      question: "What kind of communities can I find on Open Place?",
-      answer:
-        "Open Place hosts a wide variety of communities, ranging from support groups and hobby enthusiasts to professional networks and educational forums. You can explore existing communities or create your own based on your interests.",
-    },
-    {
-      question: "How do I start my own community on Open Place?",
+      question: "Do I need to provide personal details to join?",
       answer: (
         <>
-          To start a community, log into your account, navigate to the
-          &apos;Create Community&apos; section, choose your privacy settings,
-          and invite members. You can customize your community&apos;s rules and
-          moderation preferences.
+          No, Open Place doesn&apos;t require any personal information. Just
+          create a Code Name, user ID, and password, and you&apos;re ready to
+          go.
         </>
       ),
     },
     {
-      question: "How does Open Place handle content moderation?",
+      question: "Can I have private conversations?",
       answer:
-        "Open Place uses a combination of AI-powered tools and human moderators to ensure content adheres to our community guidelines. Users can also report inappropriate content, which our team reviews promptly.",
+        "Absolutely. You can create private Places and invite others for more secure, intimate discussions.",
     },
     {
-      question: "Can I delete my account and data from Open Place?",
+      question: "Is my data being tracked or monitored?",
       answer:
-        "Yes, you have full control over your account. You can delete your account and all associated data at any time through your account settings. We comply with data protection regulations and ensure your right to be forgotten.",
+        "Not at all. Open Place is built with privacy in mind—no analytics, no location tracking, and no surveillance of any kind.",
     },
     {
-      question: "What makes Open Place different from other social platforms?",
+      question: "Can I share the link to my Place with others?",
       answer:
-        "Open Place stands out with its focus on privacy, meaningful connections, and personal growth. We prioritize quality interactions over quantity, offer robust privacy controls, and foster a supportive environment for diverse communities.",
-    },
-    {
-      question: "How can I upgrade to a Pro account?",
-      answer: (
-        <>
-          To upgrade to a Pro account, go to your account settings and select
-          the &apos;Upgrade to Pro&apos; option. You can choose between monthly
-          or annual billing cycles and enjoy additional features like unlimited
-          private rooms and priority support.
-        </>
-      ),
+        "Yes! Each Place has a unique URL you can share, allowing others to easily join public discussions.",
     },
   ];
 
   return (
-    <section id="faq" className="py-20">
+    <section id="faq" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-[#195276]">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-[#195276] dark:text-gray-200">
           Frequently Asked Questions
         </h2>
         <div className="max-w-6xl mx-auto">
           {faqs.map((faq, index) => (
             <div key={index} className="mb-4">
               <button
-                className="flex justify-between items-center w-full p-5 bg-white rounded border-b hover:bg-[#F3AA1D]/10 transition-colors duration-200"
+                className="flex justify-between items-center w-full p-5 bg-white dark:bg-gray-800 rounded border-b border-gray-600 hover:bg-[#F3AA1D]/10 dark:hover:bg-[#F3AA1D]/20 transition-colors duration-200"
                 onClick={() => toggleQuestion(index)}
                 aria-expanded={openIndex === index}
               >
-                <span className="text-lg font-semibold text-[#195276]">
+                <span className="text-lg font-semibold text-[#195276] dark:text-gray-200">
                   {faq.question}
                 </span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-[#195276]" />
+                  <ChevronUp className="w-5 h-5 text-[#195276] dark:text-gray-200" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-[#195276]" />
+                  <ChevronDown className="w-5 h-5 text-[#195276] dark:text-gray-200" />
                 )}
               </button>
               {openIndex === index && (
-                <div className="mt-2 p-5 bg-white rounded-lg shadow">
-                  <p className="text-[#195276]">{faq.answer}</p>
+                <div className="mt-2 p-5 bg-white dark:bg-gray-800 rounded-lg shadow">
+                  <p className="text-[#195276] dark:text-gray-200">{faq.answer}</p>
                 </div>
               )}
             </div>

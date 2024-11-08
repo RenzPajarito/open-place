@@ -170,7 +170,7 @@ const terms = [
 const TermsConditions = () => {
   return (
     <>
-      <div className="px-4 py-8 min-h-screen">
+      <div className="px-4 py-8 min-h-screen dark:bg-gray-900 dark:text-gray-200">
         <div className="max-w-6xl mx-auto">
           <Link href="/">
             <Image
@@ -182,7 +182,7 @@ const TermsConditions = () => {
             />
           </Link>
           <hr className="my-8" />
-          <h1 className="text-4xl font-bold text-center text-gray-700 mb-4">
+          <h1 className="text-4xl font-bold text-center text-gray-700 mb-4 dark:text-gray-200">
             Terms and Conditions
           </h1>
 
@@ -192,14 +192,18 @@ const TermsConditions = () => {
               key={index}
             >
               {term.title && (
-                <h2 className="text-2xl font-semibold text-gray-700 mb-2">{term.title}</h2>
+                <h2 className="text-2xl font-semibold text-gray-700 mb-2 dark:text-gray-200">
+                  {term.title}
+                </h2>
               )}
-              <p className="text-gray-600 leading-relaxed">{term.body}</p>
+              <p className="text-gray-600 leading-relaxed dark:text-gray-300">
+                {term.body}
+              </p>
             </section>
           ))}
         </div>
       </div>
-      <Footer showFooter={true} footerType="newFooter" />
+      <Footer quickLinks={false} footerType="newFooter" />
     </>
   );
 };

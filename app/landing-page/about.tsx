@@ -9,24 +9,29 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-white py-20">
+    <section id="about" className="bg-white dark:bg-gray-900 py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-opb dark:text-gray-200">
           What is Open Place?
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <p className="text-lg mb-4">
-              Open Place is a secure online platform where individuals can
-              connect with like-minded people, share experiences, and explore
-              new avenues of personal and collective growth. Built with user
-              safety and privacy in mind, Open Place provides the freedom to
-              connect authentically.
+            <p className="text-lg mb-4 text-opb dark:text-gray-300">
+              Open Place is a secure, anonymous platform for open conversations.
+              Here, you&apos;re free to share your thoughts without revealing your
+              identity or personal information. Create public or private spaces,
+              connect with others, and discuss any topic—sensitive or
+              lighthearted—safely and without any tracking or monitoring. Each
+              &quot;Place&quot; is your space to talk, connect, and be heard on your
+              terms.
             </p>
             <ul className="space-y-2">
               {aboutLists.map((list, index) => (
-                <li key={index} className="flex items-center">
-                  <CheckCircle className="mr-2 text-[#f3aa1d]" />
+                <li
+                  key={index}
+                  className="flex items-center text-opb dark:text-gray-300"
+                >
+                  <CheckCircle className="mr-2 text-[#f3aa1d] dark:text-[#f3aa1d]" />
                   {list.text}
                 </li>
               ))}

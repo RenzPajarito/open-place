@@ -64,7 +64,7 @@ const texts = [
 const PrivacyPolicy = () => {
   return (
     <div>
-      <div className="px-4 py-8 min-h-screen">
+      <div className="px-4 py-8 min-h-screen dark:bg-gray-900 dark:text-gray-200">
         <div className="max-w-6xl mx-auto">
           <Link href="/">
             <Image
@@ -76,14 +76,18 @@ const PrivacyPolicy = () => {
             />
           </Link>
           <hr className="my-8" />
-          <h1 className="text-4xl font-bold text-center text-gray-700 mb-4">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold text-center text-gray-700 mb-4 dark:text-gray-200">
+            Privacy Policy
+          </h1>
           {texts.map((text, index) => (
             <section
               className="mb-6"
               key={index}
             >
-              <h2 className="text-2xl font-semibold text-gray-700 mb-2">{text.title}</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-2xl font-semibold text-gray-700 mb-2 dark:text-gray-200">
+                {text.title}
+              </h2>
+              <p className="text-gray-600 leading-relaxed dark:text-gray-300">
                 {text.body}
                 <a
                   href={`mailto:${text.support}`}
@@ -94,7 +98,7 @@ const PrivacyPolicy = () => {
               </p>
 
               {text.data && (
-                <ul className="list-disc ml-6 mt-2 text-gray-600">
+                <ul className="list-disc ml-6 mt-2 text-gray-600 dark:text-gray-300">
                   {text.data.map((item, i) => (
                     <li key={i}>{Object.values(item)[0]}</li>
                   ))}
@@ -105,7 +109,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
 
-      <Footer showFooter={true} footerType="newFooter" />
+      <Footer quickLinks={false} footerType="newFooter" />
     </div>
   );
 };
