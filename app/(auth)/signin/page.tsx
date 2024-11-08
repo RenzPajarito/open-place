@@ -75,7 +75,7 @@ export default function Login() {
             </Button>
           </form>
           <p className="px-8 text-center text-sm text-muted-foreground">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               className="underline underline-offset-4 hover:text-primary"
               href={""}
